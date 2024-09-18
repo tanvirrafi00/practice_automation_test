@@ -69,3 +69,21 @@ Feature: Home Page
     Then I should see "1 Item" in the menu
     When I click on the item from menu
     Then I should be on the check out page
+
+  @coupon
+  Scenario: TS-008:Home-Arrivals-Add to Basket-Items-Coupon
+    When I click on shop menu
+    Then I should be on the shop page
+    When I click on the home menu
+    Then I should see home page has only 3 arrivals
+    When I click on the first image in the arrivals
+    Then I should be on prodcut description page
+    And There should a basket button is visible
+    When I click on the add to basket button
+    Then I should see "1 Item" in the menu
+    When I click on the item from menu
+    Then I should be on the check out page
+    When I enter Coupon code in coupon code field
+    And I click on the apply coupon button
+    Then I should see coupon code added message
+    And I should see "-₹50.00, Free shipping coupon" basket totals table
