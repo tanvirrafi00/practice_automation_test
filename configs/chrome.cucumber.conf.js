@@ -6,7 +6,7 @@ export const config = {
     framework: "cucumber",
     cucumberOpts: {
       require: ["./test/step-definitions/**/*.js"],
-      tagExpression: "",
+      tags: "",
     },
     specs: ["../test/features/**/*.feature"],
     capabilities: [
