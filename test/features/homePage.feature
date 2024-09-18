@@ -87,3 +87,4 @@ Feature: Home Page
     And I click on the apply coupon button
     Then I should see coupon code added message
     And I should see "-₹50.00, Free shipping coupon" basket totals table
+    ##
