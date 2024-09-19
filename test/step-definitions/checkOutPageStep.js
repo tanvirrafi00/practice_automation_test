@@ -24,3 +24,11 @@ Then(/^I should see coupon code added message$/, async () => {
 Then(/^I should see "(.*)" basket totals table$/, async (couponAmmountMessage) => {
   assert.include(await checkOutPage.getCouponAmmount(), couponAmmountMessage, "Coupon ammount message not showing in the basket table");
 });
+
+When(/^I click on the remove icon$/, async () => {
+  await checkOutPage.clickOnRemoveLink();
+});
+
+Then(/^I should see remove message on the message box$/, async () => {
+  assert.include(await checkOutPage.getRemoveItemMessage(), `${message.remove}`);
+});
