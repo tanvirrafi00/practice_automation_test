@@ -31,10 +31,8 @@ class HomePage extends BasePage {
   }
 
   async clickOnMyaccont() {
-    console.log("I am going to click on my account........................");
     await this.myAccountLink.state().waitForClickable();
     await this.myAccountLink.click();
-    console.log("clicked on the my account................................");
   }
 }
 
