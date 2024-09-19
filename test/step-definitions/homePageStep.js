@@ -25,3 +25,7 @@ Then(/^I should see home page has only (\d+) arrivals$/, async (count) => {
 When(/^I click on the first image in the arrivals$/, async () => {
   await HomePage.clickOnFirstArrivalImage();
 });
+
+When(/^I click on my account from the menu$/, async () => {
+  await HomePage.clickOnMyaccont();
+});
