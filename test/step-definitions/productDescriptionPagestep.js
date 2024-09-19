@@ -36,7 +36,7 @@ Then(/^i should see book added message$/, async () => {
   assert.include(await ProductDescriptionPage.getBookAddedMessage(), `“${bookName}” ${message.bookAdded}`);
 });
 
-Then(/^I should see "([^"]*)" in the menu$/, async (str) => {
+Then(/^I should see (.*) in the menu$/, async (str) => {
   assert.include(await ProductDescriptionPage.getItemNumber(), str, "item not showing in the menu");
 });
 
