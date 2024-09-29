@@ -8,6 +8,19 @@ export const config = {
       require: ["./test/step-definitions/**/*.js"],
       tags: "",
     },
+    reporters: [
+      "spec",
+      [
+        "allure",
+        {
+          outputDir: "allure-results",
+          disableWebdriverStepsReporting: true,
+          disableWebdriverScreenshotsReporting: false,
+          disableMochaHooks: true,
+          useCucumberStepReporter: true,
+        },
+      ],
+    ],
     specs: ["../test/features/**/*.feature"],
     capabilities: [
       {
